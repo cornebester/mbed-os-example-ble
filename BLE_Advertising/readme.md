@@ -35,3 +35,47 @@ Building instructions for all samples are in the [main readme](https://github.co
    
 If you can see the battery level, and if its value is changing, the application is working properly.
 
+
+
+
+ls /dev
+https://stackoverflow.com/questions/8632586/macos-whats-the-difference-between-dev-tty-and-dev-cu
+
+screen /dev/cu.usbmodem231103
+
+https://os.mbed.com/docs/mbed-os/v6.14/build-tools/install-or-upgrade.html
+python -m pip install mbed-tools
+mbed-tools detect
+df
+ls -alh /Volumes/DIS_L4IOT
+
+
+cd Documents/personal
+git clone https://github.com/ARMmbed/mbed-os-example-ble.git
+cd mbed-os-example-ble
+cd BLE_Advertising
+mbed-tools deploy | update
+mbed-tools compile --help
+mbed-tools compile -m DISCO_L475VG_IOT01A -t GCC_ARM --flash --sterm --baudrate 115200
+
+
+download https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads
+
+cd ~/
+cd gcc_arm
+tar xjf ~/Downloads/gcc-arm-none-eabi-10.3-2021.07-mac-10.14.6.tar.bz2
+https://gist.github.com/joegoggins/7763637
+export PATH=$PATH:/Users/cornebester/gcc_arm/gcc-arm-none-eabi-10.3-2021.07/bin
+./arm-none-eabi-gcc --version
+arm-none-eabi-gcc --version
+
+million mac security prompts and allow bypasses
+
+brew update
+brew install --cask coolterm ( optional / use iterm with profile)
+https://macappstore.org/ninja/
+brew install ninja\n
+brew install cmake
+
+mbed-tools detect
+mbed-tools compile -m DISCO_L475VG_IOT01A -t GCC_ARM --flash --sterm --baudrate 115200

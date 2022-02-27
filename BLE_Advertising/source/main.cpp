@@ -178,6 +178,7 @@ void schedule_ble_events(BLE::OnEventsToProcessCallbackContext *context)
 
 int main()
 {
+    printf("app started.\r\n");
     mbed_trace_init();
 
     BLE &ble = BLE::Instance();
